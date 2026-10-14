@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Greshy Likes • Content Editor</title>
+<style>
+:root{font-family:system-ui,Segoe UI,Arial,sans-serif;color:#18362c;background:#f4f5f0}*{box-sizing:border-box}body{margin:0}header{background:#123b2c;color:#f0dec0;padding:35px max(22px,calc((100vw - 1120px)/2))}h1{font-family:Georgia,serif;font-size:2.1rem;margin:0 0 9px}header p{color:#d5e2d5;margin:0;line-height:1.6}.wrap{width:min(1120px,calc(100% - 44px));margin:32px auto 70px}.note{padding:18px 22px;background:#fff7e6;border-left:4px solid #b49360;margin-bottom:24px;line-height:1.65}.tabbar{display:flex;gap:7px;margin-bottom:18px}.tabbar button{background:#e4e9df;color:#1c4936;border:1px solid #d1dcd0;padding:11px 22px;border-radius:6px}.tabbar button[aria-selected="true"]{background:#123b2c;color:#fff}.panel{background:white;padding:28px;border-radius:12px;box-shadow:0 12px 36px #173b2310}h2{font-family:Georgia,serif;font-size:1.5rem;margin-top:0}.actions{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0 25px}.btn{background:#153e2b;border:1px solid #153e2b;color:#fff;border-radius:6px;padding:11px 16px;font-weight:600}.btn.alt{background:white;color:#163b2e;border-color:#bdd0c2}.btn.warn{background:#fff5f3;color:#873f31;border-color:#e4c5bd}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #dcb976;outline-offset:2px}.editor-grid{display:grid;grid-template-columns:270px minmax(0,1fr);gap:25px}.product-list{max-height:600px;overflow:auto;border:1px solid #e1e5dc;border-radius:7px}.product-list button{width:100%;display:block;padding:12px;text-align:left;background:white;border:0;border-bottom:1px solid #e7ebe6;color:#284e39}.product-list button.active{background:#e6eee5;border-left:4px solid #287048;font-weight:700}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.field{display:block;font-size:.82rem;font-weight:700;color:#385747}.field.full{grid-column:1/-1}.field input,.field textarea,.field select{display:block;margin-top:7px;width:100%;border:1px solid #cbd5cb;border-radius:5px;padding:12px;font:400 .94rem system-ui;color:#1a3829;background:#fff}.field textarea{min-height:102px;resize:vertical}.small{font-size:.78rem;color:#748079;line-height:1.6;margin:10px 0}.photo{width:170px;height:150px;object-fit:cover;background:#edf1ec;border:1px solid #e2e7e0;margin:10px 0}.break{padding-top:20px;border-top:1px solid #edf0ec;margin-top:20px}.download{background:#c1a06b;color:#1b301d;border-color:#c1a06b}.status{color:#47785d;min-height:1.2em;font-weight:650}details{margin-top:25px;border-top:1px solid #e8e8e5;padding-top:15px}summary{cursor:pointer}.preview{margin-top:9px}.row{display:flex;align-items:center;gap:12px}.row input{width:18px;height:18px}h3{font-size:1.1rem;font-family:Georgia,serif;margin:28px 0 14px}@media(max-width:740px){.editor-grid,.fields{grid-template-columns:1fr}.panel{padding:18px}.field.full{grid-column:auto}.product-list{max-height:220px}}
+
+[hidden]{display:none!important}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font:600 .9rem system-ui;cursor:pointer}.btn:disabled{opacity:.55;cursor:wait}.header-inner{max-width:1120px;display:flex;justify-content:space-between;align-items:center;gap:24px}.header-inner p{max-width:650px}.view-site{background:#f0dec0;color:#123b2c;border-color:#f0dec0;white-space:nowrap}.publish-bar{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#fff;border:1px solid #dce4da;border-radius:12px;padding:24px;margin-bottom:20px}.publish-bar h2{margin:0 0 8px;font-size:1.35rem}.publish-bar p{margin:0;color:#526a5a;line-height:1.6}.publish-bar .status{margin-top:12px}.setup{background:#eef2e9;padding:16px 20px;border:1px solid #dce4da;border-radius:9px;margin:0 0 24px}.setup summary{font-weight:650}.setup .btn{margin:14px 12px 0 0}.tabbar{border-bottom:1px solid #d5dfd2;padding-bottom:16px;flex-wrap:wrap}.panel-heading{display:flex;justify-content:space-between;align-items:start;gap:20px}.panel-heading h2{margin-bottom:8px}.panel-heading p{margin-top:0;max-width:680px}.catalogue-sidebar h3{margin:0 0 12px}.catalogue-sidebar .btn{width:100%;margin-bottom:12px}.catalogue-sidebar details{font-size:.85rem}.catalogue-sidebar .actions{margin-bottom:0}.product-list{max-height:650px}.form-section{grid-column:1/-1;padding:18px 0 0;border-top:1px solid #e2e8de}.form-section:first-child{padding-top:0;border-top:0}.form-section h3{margin:0 0 5px;font:700 1rem system-ui}.form-section p{margin:0;color:#617264;font-size:.83rem;line-height:1.6}.save-actions{display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid #e2e8de;padding-top:22px;margin-top:5px}.photo{width:220px;height:200px;object-fit:contain;border-radius:8px}.image-box{padding:18px;background:#f7f9f4;border:1px solid #e2e8de;border-radius:9px}.site-group{grid-column:1/-1;min-width:0;border:1px solid #e0e7dc;padding:22px;border-radius:9px;margin:4px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.site-group legend{font-weight:700;padding:0 8px}.site-group .field.full{grid-column:1/-1}.status:empty{display:none}.workflow{display:flex;gap:24px;flex-wrap:wrap;margin:0 0 20px;padding:0;list-style:none;color:#506b56;font-size:.85rem}.workflow strong{color:#18362c}.btn:focus-visible{outline:3px solid #dcb976;outline-offset:3px}
+@media(max-width:740px){header{padding:25px 22px}.header-inner,.publish-bar,.panel-heading{align-items:stretch;flex-direction:column}.wrap{width:calc(100% - 28px);margin-top:20px}.header-inner h1{font-size:1.7rem}.view-site{align-self:flex-start}.site-group{grid-template-columns:1fr;padding:16px}.workflow{gap:10px;flex-direction:column}.catalogue-sidebar .btn{width:auto}.publish-bar{padding:20px}.site-group .field.full{grid-column:auto}}
+</style></head><body>
+<header><div class="header-inner"><div><h1>Greshy Likes — Content Editor</h1><p>Manage your products, photos and website content in one place.</p></div><a class="btn view-site" id="viewSite" href="../index.html" target="_blank" rel="noopener">View my site ↗</a></div></header>
+<main class="wrap">
+<section class="publish-bar" aria-labelledby="publishHeading"><div><h2 id="publishHeading">Update your website</h2><p>Save each form as you edit, or publish both forms together.</p><p class="small">Changes update your local website. Upload <strong>dist/</strong> or push to your configured Git host to update your public site.</p><p id="publishStatus" class="status" role="status"></p></div><button class="btn download" id="publishChanges" type="button">Publish changes to local website</button></section>
+<ol class="workflow" aria-label="Editing steps"><li><strong>1.</strong> Choose a product or website section</li><li><strong>2.</strong> Edit details and photos</li><li><strong>3.</strong> Save and view your site</li></ol>
+<details class="setup"><summary>Connection &amp; setup <span id="folderStatus" class="small">Start START_AUTO_UPDATE.bat to connect automatically.</span></summary><p class="small">Open the editor from <strong>START_AUTO_UPDATE.bat</strong> for automatic saving and page updates. If you opened this file directly, Chrome or Edge can connect to your main website folder instead.</p><button class="btn alt" id="connectFolder" type="button">Connect website folder</button></details>
+<div class="tabbar" role="tablist" aria-label="Content sections"><button type="button" role="tab" id="productTab" aria-controls="productsPanel" aria-selected="true">Products &amp; Prices</button><button type="button" role="tab" id="siteTab" aria-controls="sitePanel" aria-selected="false">Website &amp; Contact</button></div>
+<section class="panel" id="productsPanel" role="tabpanel" aria-labelledby="productTab"><div class="panel-heading"><div><h2>Product catalogue <span id="total"></span></h2><p class="small">Choose a product to edit, or add a new one. Save changes to update its page and your catalogue.</p></div></div>
+<div class="editor-grid"><aside class="catalogue-sidebar"><h3>Your products</h3><button class="btn" id="addProduct" type="button">+ Add product</button><div class="product-list" id="productList" aria-label="Choose a product"></div><details><summary>Backups &amp; export</summary><div class="actions"><button class="btn alt" id="downloadProducts" type="button">Download products.js ↓</button><button class="btn alt" id="exportCsv" type="button">Download CSV backup ↓</button><button class="btn download" id="writeProducts" type="button" hidden>Save directly to website ↗</button></div></details></aside><div><form id="productForm" class="fields">
+<div class="form-section"><h3>Product details</h3><p>Give your product a name and choose where it belongs.</p></div>
+<label class="field">Product name<input name="name" required maxlength="180"></label>
+<label class="field">Product category<input name="category" required list="categoryOptions" placeholder="Perfumes / Personal Care"></label><datalist id="categoryOptions"><option value="Perfumes"><option value="Personal Care"><option value="Car Fragrance"></datalist>
+<label class="field">Website section<select name="section"><option value="signature">Signature Perfumes (first section)</option><option value="more">More Products (second section)</option></select></label>
+<label class="field">Pricing tier (optional)<input name="priceCategory" placeholder="Leave blank if not needed"></label>
+<div class="form-section"><h3>Price &amp; availability</h3><p>Leave the price blank if customers should enquire.</p></div><label class="field">Price in LKR<input name="price" type="number" min="0" step="1" placeholder="Leave blank for enquiry"></label>
+<label class="field">Product size<input name="size" placeholder="50 ml, 100 ml, 50 g..."></label>
+<label class="field">Availability<select name="availability"><option value="enquire">Ask to confirm availability</option><option value="in_stock">Available to order</option><option value="out_of_stock">Out of stock</option><option value="coming_soon">Coming soon</option></select></label>
+<div class="form-section"><h3>Description &amp; photo</h3><p>Describe your product and upload a clear photo.</p></div><label class="field full">Description<textarea name="description" placeholder="Write only details you can verify"></textarea></label>
+<div class="field full image-box"><label for="imageField">Product image</label><input id="imageField" name="image" list="photoChoices" placeholder="assets/images/example.webp"><datalist id="photoChoices"><option value="assets/images/bottle-sample-01.webp"></option><option value="assets/images/bottle-sample-03.webp"></option><option value="assets/images/car-diffuser-980-rs.webp"></option><option value="assets/images/cinnamon-gold-ayurweda-special.webp"></option><option value="assets/images/clove-breeze.webp"></option><option value="assets/images/emerald-crown.webp"></option><option value="assets/images/emerald-fresh.webp"></option><option value="assets/images/golden-crown.webp"></option><option value="assets/images/herbal-boady-wash-personal-care-product-200-ml-1800-rs.webp"></option><option value="assets/images/herbal-face-cream-personal-care-product-50g-3-800-rs.webp"></option><option value="assets/images/herbal-face-wash-personal-care-product-100-ml-1400-rs.webp"></option><option value="assets/images/lavender-breeze.webp"></option><option value="assets/images/lavender-gold.webp"></option><option value="assets/images/lip-balm-personal-care-product-990-rs.webp"></option><option value="assets/images/logo.webp"></option><option value="assets/images/pack.webp"></option><option value="assets/images/perfume-10-ml-1500rs.webp"></option><option value="assets/images/royal-bloom.webp"></option></datalist><button class="btn alt" id="uploadImage" type="button" style="margin-top:12px">Upload image ↑</button><input id="imageUpload" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden><span id="imageUploadStatus" class="small" role="status" style="display:block">Choose a photo from your computer, or select an existing image above. PNG, JPG, WebP or GIF; maximum 10 MB.</span><img class="photo preview" id="productPreview" alt="Selected image preview" hidden></div>
+<div class="form-section"><h3>Visibility &amp; save</h3><p>Enable display to include this product on your website.</p></div><label class="field full row"><input name="published" type="checkbox" checked><span>Display this product on the website</span></label>
+<div class="field full save-actions"><button class="btn" type="submit">Save product changes</button> <button class="btn warn" id="deleteProduct" type="button">Remove product</button></div>
+</form><p id="productStatus" class="status" role="status"></p></div></div></section>
+<section class="panel" id="sitePanel" role="tabpanel" aria-labelledby="siteTab" hidden><h2>Brand &amp; website text</h2><p class="small">To emphasize part of a heading, put a <strong>|</strong> before those words. You can add a line break with Enter in title fields.</p>
+<form id="siteForm" class="fields"><fieldset class="site-group"><legend>Brand & contact</legend><label class="field ">Brand name<input name="brand" type="text"></label><label class="field ">Tagline<input name="tagline" type="text"></label><label class="field ">WhatsApp number (country code, no +)<input name="whatsapp" type="text"></label><label class="field ">Business email<input name="email" type="email"></label><label class="field ">Location<input name="location" type="text"></label><label class="field ">Instagram link (optional)<input name="instagram" type="url"></label><label class="field ">Facebook link (optional)<input name="facebook" type="url"></label><label class="field ">TikTok link (optional)<input name="tiktok" type="url"></label></fieldset><fieldset class="site-group"><legend>Homepage introduction</legend><label class="field ">Small hero heading<input name="heroEyebrow" type="text"></label><label class="field full">Main hero title<textarea name="heroTitle" rows="2"></textarea></label><label class="field full">Hero description<textarea name="heroText" rows="2"></textarea></label><label class="field full">Intro title<textarea name="introTitle" rows="2"></textarea></label><label class="field full">Intro description<textarea name="introText" rows="2"></textarea></label></fieldset><fieldset class="site-group"><legend>Collections & gifts</legend><label class="field full">Signature perfume section title<textarea name="collectionTitle" rows="2"></textarea></label><label class="field full">Signature perfume section introduction<textarea name="collectionText" rows="2"></textarea></label><label class="field full">More products section title<textarea name="moreTitle" rows="2"></textarea></label><label class="field full">More products section introduction<textarea name="moreText" rows="2"></textarea></label><label class="field full">Gift section title<textarea name="giftTitle" rows="2"></textarea></label><label class="field full">Gift section text<textarea name="giftText" rows="2"></textarea></label></fieldset><fieldset class="site-group"><legend>Brand story</legend><label class="field ">Story eyebrow<input name="storyEyebrow" type="text"></label><label class="field full">Story title<textarea name="storyTitle" rows="2"></textarea></label><label class="field full">Brand story<textarea name="storyText" rows="2"></textarea></label></fieldset><fieldset class="site-group"><legend>Contact section</legend><label class="field full">Contact heading<textarea name="contactTitle" rows="2"></textarea></label><label class="field full">Contact description<textarea name="contactText" rows="2"></textarea></label></fieldset><fieldset class="site-group"><legend>Website images</legend><label class="field ">Logo image path<input name="logo" type="text"></label><label class="field ">Hero image path<input name="heroImage" type="text"></label><label class="field ">Story image path<input name="storyImage" type="text"></label><label class="field ">Feature image path<input name="featureImage" type="text"></label></fieldset><fieldset class="site-group"><legend>Search engine appearance</legend><label class="field ">Browser title / SEO<input name="seoTitle" type="text"></label><label class="field full">Search description / SEO<textarea name="seoDescription" rows="2"></textarea></label></fieldset><div class="field full save-actions"><button class="btn" type="submit">Save website changes</button> <button class="btn alt" id="downloadSite" type="button">Download site.js ↓</button><button class="btn download" id="writeSite" type="button" hidden>Save directly to website ↗</button></div></form><p id="siteStatus" class="status" role="status"></p></section>
+<details><summary><strong>Frequently asked questions</strong></summary><p class="small"><strong>Does this editor change my live website?</strong> Saving updates your local website automatically while START_AUTO_UPDATE.bat is running. Upload dist/ to update public hosting. A Git-connected host can then rebuild and deploy when the changes are pushed to your repository.</p><p class="small"><strong>Do I need Node.js?</strong> Not for the public website. To run the optional local auto-updater, install Python 3. No Node.js is needed.</p><p class="small"><strong>Will changes remain if I close this editor without downloading?</strong> Yes, after a successful save or local publish. Unsaved edits are lost when you close the editor.</p></details>
+</main>
+<script src="../data/products.js"></script><script src="../data/site.js"></script>
+<script>
+'use strict';
+const $=(s)=>document.querySelector(s);
+let products=JSON.parse(JSON.stringify(window.GRESHY_PRODUCTS||[]));
+let site=JSON.parse(JSON.stringify(window.GRESHY_SITE||{}));
+let selected=0;
+function escapeHTML(value){return String(value||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function flash(id,txt){$(id).textContent=txt;}
+function showList(){const box=$('#productList');box.replaceChildren();$('#total').textContent=`(${products.length})`;products.forEach((p,i)=>{const button=document.createElement('button');button.textContent=p.name||'New product';button.className=i===selected?'active':'';button.type='button';button.addEventListener('click',()=>{saveProduct(false);selected=i;showList();showProduct();});box.append(button);});}
+function showProduct(){const p=products[selected];$('#productForm').hidden=!p;if(!p)return;for(const f of $('#productForm').elements){if(!f.name)continue;const val=f.name==='image'?(p.images?.[0]||''):p[f.name];if(f.type==='checkbox')f.checked=p.published!==false;else f.value=val===null||val===undefined?'':val;}previewImage();}
+function previewImage(){const path=$('#imageField').value.trim(),img=$('#productPreview');img.hidden=!path;if(path){img.src='../'+path;img.onerror=()=>{img.hidden=true;};img.onload=()=>{img.hidden=false;};}}
+function saveProduct(showMessage=true){if(!products[selected])return false;const f=$('#productForm');const o=Object.fromEntries(new FormData(f).entries());const p=products[selected];if(!o.name?.trim()||!o.category?.trim()){if(showMessage)flash('#productStatus','Enter the product name and category first.');return false;}
+p.name=o.name.trim();p.category=o.category.trim();p.section=o.section==='signature'?'signature':'more';p.priceCategory=o.priceCategory.trim();p.price=(o.price===''?null:Math.max(0,Number(o.price)));p.size=o.size.trim()||null;p.availability=o.availability;p.description=o.description.trim();p.images=o.image.trim()?[o.image.trim()]:[];p.published=f.elements.published.checked;p.id=p.id||slug(p.name);if(showMessage)flash('#productStatus','Saved here. Download products.js to keep these changes.');showList();return true;}
+function slug(t){return t.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||`product-${Date.now()}`;}
+$('#productForm').addEventListener('submit',async e=>{e.preventDefault();if(saveProduct(false))await persistChanges({products},'#productStatus');});
+$('#imageField').addEventListener('input',previewImage);
+$('#addProduct').addEventListener('click',()=>{saveProduct(false);products.push({id:'product-'+Date.now(),name:'New product',category:'Personal Care',section:'more',priceCategory:'',description:'',price:null,size:null,images:[],availability:'enquire',published:false});selected=products.length-1;showList();showProduct();flash('#productStatus','New product added. Fill in the fields and click Save product changes to update the website.');});
+$('#deleteProduct').addEventListener('click',async ()=>{if(!products.length)return;if(confirm('Remove this product from the catalogue?')){products.splice(selected,1);selected=Math.max(0,Math.min(selected,products.length-1));showList();showProduct();await persistChanges({products},'#productStatus');}});
+function download(filename,text,mime='text/javascript'){const url=URL.createObjectURL(new Blob([text],{type:mime}));const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),3000);}
+function downloadJs(name,value){download(name,`// Editable website data — generated by the local content editor.\nwindow.${name==='products.js'?'GRESHY_PRODUCTS':'GRESHY_SITE'} = ${JSON.stringify(value,null,2)};\n`);}
+$('#downloadProducts').addEventListener('click',()=>{if(!saveProduct())return;downloadJs('products.js',products);flash('#productStatus','Downloaded products.js — put it in the data folder.');});
+$('#exportCsv').addEventListener('click',()=>{saveProduct(false);const keys=['id','name','category','section','priceCategory','description','size','price','images','availability','published'];const cell=s=>'"'+String(s??'').replace(/"/g,'""')+'"';const rows=[keys.map(cell).join(','),...products.map(p=>keys.map(k=>cell(k==='images'?(p.images||[]).join(';'):p[k])).join(','))];download('greshy-product-backup.csv',rows.join('\r\n'),'text/csv');});
+const allSiteKeys=["brand", "tagline", "whatsapp", "email", "location", "instagram", "facebook", "tiktok", "heroEyebrow", "heroTitle", "heroText", "introTitle", "introText", "collectionTitle", "collectionText", "moreTitle", "moreText", "giftTitle", "giftText", "storyEyebrow", "storyTitle", "storyText", "contactTitle", "contactText", "logo", "heroImage", "storyImage", "featureImage", "seoTitle", "seoDescription"];
+function showSite(){const f=$('#siteForm');allSiteKeys.forEach(key=>{const node=f.elements.namedItem(key);if(node)node.value=site[key]||'';});}
+function saveSite(){const f=$('#siteForm');if(!f.reportValidity())return false;for(const key of allSiteKeys){site[key]=f.elements.namedItem(key).value.trim();}return true;}
+$('#siteForm').addEventListener('submit',async e=>{e.preventDefault();if(saveSite())await persistChanges({site},'#siteStatus');});
+$('#downloadSite').addEventListener('click',()=>{if(!saveSite())return;downloadJs('site.js',site);flash('#siteStatus','Downloaded site.js — put it in the data folder.');});
+function setTab(which){const product=which==='product';$('#productsPanel').hidden=!product;$('#sitePanel').hidden=product;$('#productTab').setAttribute('aria-selected',String(product));$('#siteTab').setAttribute('aria-selected',String(!product));}
+$('#productTab').addEventListener('click',()=>setTab('product'));$('#siteTab').addEventListener('click',()=>{saveProduct(false);showSite();setTab('site');});
+
+// Optional browser File System Access API: explicitly authorized local folder only.
+// The site remains entirely static. START_AUTO_UPDATE.bat watches these saved files
+// and generates fresh product HTML/SEO automatically.
+let connectedDataFolder = null;
+let connectedRootFolder = null;
+const connectionButton = $('#connectFolder');
+if (!window.showDirectoryPicker) {
+  connectionButton.disabled = true;
+  $('#folderStatus').textContent = 'Direct saving requires Chrome or Edge on localhost. The download buttons still work.';
+}
+function parseAssignedJson(text, variable) {
+  const marker = new RegExp('window\\.' + variable + '\\s*=\\s*');
+  const match = marker.exec(text);
+  if (!match) throw new Error('Could not find ' + variable + ' in the selected data file.');
+  return JSON.parse(text.slice(match.index + match[0].length).trim().replace(/;\s*$/, ''));
+}
+connectionButton.addEventListener('click', async () => {
+  try {
+    const root = await window.showDirectoryPicker({mode: 'readwrite'});
+    const folder = await root.getDirectoryHandle('data');
+    const productHandle = await folder.getFileHandle('products.js');
+    const siteHandle = await folder.getFileHandle('site.js');
+    const latestProducts = parseAssignedJson(await (await productHandle.getFile()).text(), 'GRESHY_PRODUCTS');
+    const latestSite = parseAssignedJson(await (await siteHandle.getFile()).text(), 'GRESHY_SITE');
+    if (!Array.isArray(latestProducts) || !latestSite || typeof latestSite !== 'object') {
+      throw new Error('Unexpected file contents; please select the correct site folder.');
+    }
+    connectedDataFolder = folder;
+    connectedRootFolder = root;
+    products = latestProducts;
+    site = latestSite;
+    selected = 0;
+    showList();
+    showProduct();
+    showSite();
+    $('#writeProducts').hidden = false;
+    $('#writeSite').hidden = false;
+    $('#folderStatus').textContent = 'Connected. You can now save changes directly to data/*.js.';
+  } catch (error) {
+    if (error.name !== 'AbortError') $('#folderStatus').textContent = 'Could not connect: ' + error.message;
+  }
+});
+async function writeConnected(name, variable, value) {
+  if (!connectedDataFolder) throw new Error('Connect the website folder first.');
+  const handle = await connectedDataFolder.getFileHandle(name);
+  const stream = await handle.createWritable();
+  try {
+    await stream.write('// Greshy Likes single-source catalogue and website data.\nwindow.' + variable + ' = ' + JSON.stringify(value, null, 2) + ';\n');
+    await stream.close();
+  } catch (err) {
+    await stream.abort();
+    throw err;
+  }
+}
+let editorToken = null;
+let saving = false;
+const localConnection = (async () => {
+  if (location.origin !== 'http://127.0.0.1:8765') return;
+  try {
+    const response = await fetch('/api/editor');
+    if (!response.ok) return;
+    editorToken = (await response.json()).token;
+    $('#folderStatus').textContent = 'Automatic saving is connected. Save or publish to update data files and rebuild the website.';
+  } catch (_) { /* Folder connection and downloads remain available. */ }
+})();
+async function persistChanges(payload, status) {
+  if (saving) { flash(status, 'A save is already in progress. Please wait.'); return; }
+  saving = true;
+  const buttons = [...document.querySelectorAll('button')];
+  const disabled = buttons.map(button => button.disabled);
+  buttons.forEach(button => { button.disabled = true; });
+  flash(status, 'Saving changes and updating the website…');
+  try {
+    await localConnection;
+    if (editorToken) {
+      const response = await fetch('/api/save', {method:'POST', headers:{'Content-Type':'application/json','X-Editor-Token':editorToken}, body:JSON.stringify(payload)});
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || 'Save failed.');
+      flash(status, result.message + ' Refresh any open website page to see changes.');
+    } else if (connectedDataFolder) {
+      if (payload.products) await writeConnected('products.js','GRESHY_PRODUCTS',payload.products);
+      if (payload.site) await writeConnected('site.js','GRESHY_SITE',payload.site);
+      flash(status, 'Saved to the connected data folder. START_AUTO_UPDATE.bat must be running to rebuild pages and dist/.');
+    } else {
+      throw new Error('Start START_AUTO_UPDATE.bat and use the editor it opens, or connect the website folder. Your edits are still here; you can also download a backup.');
+    }
+  } catch (error) { flash(status, error.message); }
+  finally { saving = false; buttons.forEach((button,index) => { button.disabled = disabled[index]; }); }
+}
+$('#uploadImage').addEventListener('click',()=>{ if (!saving) $('#imageUpload').click(); });
+$('#imageUpload').addEventListener('change',async()=>{
+  const file = $('#imageUpload').files[0];
+  $('#imageUpload').value = '';
+  if (!file || saving) return;
+  if (!file.size || file.size > 10 * 1024 * 1024) {
+    flash('#imageUploadStatus','Choose an image smaller than 10 MB.'); return;
+  }
+  const extensions = {'image/png':'.png','image/jpeg':'.jpg','image/webp':'.webp','image/gif':'.gif'};
+  if (!extensions[file.type]) {
+    flash('#imageUploadStatus','Choose a PNG, JPG, WebP or GIF image.'); return;
+  }
+  saving = true;
+  const controls = [...document.querySelectorAll('button,input,select,textarea')];
+  const disabled = controls.map(control=>control.disabled);
+  controls.forEach(control=>{control.disabled=true;});
+  flash('#imageUploadStatus','Uploading image…');
+  try {
+    await localConnection;
+    let path;
+    if (editorToken) {
+      const response = await fetch('/api/upload-image',{method:'POST',headers:{'Content-Type':file.type,'X-Editor-Token':editorToken},body:file});
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || 'Image upload failed.');
+      path = result.path;
+    } else if (connectedRootFolder) {
+      const assets = await connectedRootFolder.getDirectoryHandle('assets',{create:true});
+      const images = await assets.getDirectoryHandle('images',{create:true});
+      const name = 'product-' + crypto.randomUUID() + extensions[file.type];
+      const handle = await images.getFileHandle(name,{create:true});
+      const stream = await handle.createWritable();
+      try { await stream.write(file); await stream.close(); }
+      catch (error) { await stream.abort(); throw error; }
+      path = 'assets/images/' + name;
+    } else {
+      throw new Error('Start START_AUTO_UPDATE.bat and use the editor it opens, or connect the website folder first.');
+    }
+    $('#imageField').value = path;
+    if (![...$('#photoChoices').options].some(option=>option.value===path)) {
+      const option = document.createElement('option'); option.value=path; $('#photoChoices').append(option);
+    }
+    previewImage();
+    flash('#imageUploadStatus','Image uploaded. Click Save product changes or Publish to apply it to the website.');
+  } catch (error) { flash('#imageUploadStatus',error.message); }
+  finally { saving=false; controls.forEach((control,index)=>{control.disabled=disabled[index];}); }
+});
+$('#writeProducts').addEventListener('click',async()=>{if(saveProduct(false))await persistChanges({products},'#productStatus');});
+$('#writeSite').addEventListener('click',async()=>{if(saveSite())await persistChanges({site},'#siteStatus');});
+$('#publishChanges').addEventListener('click',async()=>{
+  if (products.length && (!$('#productForm').reportValidity() || !saveProduct(false))) return;
+  if (!saveSite()) { setTab('site'); return; }
+  await persistChanges({products,site},'#publishStatus');
+});
+
+showList();showProduct();showSite();
+</script></body></html>
