@@ -12,7 +12,7 @@ window.GRESHY_SITE = {
   "heroImage": "assets/images/bottle-sample-03.webp",
   "storyImage": "assets/images/bottle-sample-01.webp",
   "featureImage": "assets/images/pack.webp",
-  "heroEyebrow": "It's Proudly Made in Sri Lanka",
+  "heroEyebrow": "Proudly Made in Sri Lanka",
   "heroTitle": "GRESHY LIKES\nHERBAL",
   "heroText": "Premium Sri Lankan Herbal Perfumes & Personal Care. Combining centuries-old traditional botanical wisdom with immaculate modern luxury presentation.",
   "introTitle": "Rooted in nature.\n|Made to be remembered.",
