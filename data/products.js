@@ -134,10 +134,10 @@ window.GRESHY_PRODUCTS = [
   },
   {
     "id": "lavender-gold",
-    "name": "Lavender Gold",
+    "name": "Lavender Bloom",
     "category": "Perfumes",
     "priceCategory": "Premium Herbal Perfume",
-    "description": "An elegant lavender-inspired fragrance with a refined, luxurious character and a sophisticated finish.",
+    "description": "Premium Lavender Bloom\n\nLuxury with Ayurveda\n\nExperience the elegance of Premium Lavender Bloom by Greshy Likes Herbal — a sophisticated fragrance that brings together soothing floral freshness, gentle warmth, and a refreshing touch of brightness.\n\nIts beautifully balanced aroma opens with a fresh, calming sensation, unfolds into a soft and graceful floral character, and settles into a warm, elegant finish. Refined yet inviting, it creates an atmosphere of serenity, confidence, and timeless luxury.\n\nPerfect for those who appreciate a graceful, refreshing fragrance with a touch of natural elegance, Premium Lavender Bloom is designed to complement both everyday moments and special occasions.\n\nGreshy Likes Herbal — Luxury with Ayurveda.\n\nWear elegance. Feel nature. Leave a beautiful impression.",
     "size": "50 ml",
     "price": 6900,
     "images": [
