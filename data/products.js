@@ -183,7 +183,7 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Supplied image filename",
-    "section": "more"
+    "section": "signature"
   },
   {
     "id": "herbal-brightening-face-cream",
