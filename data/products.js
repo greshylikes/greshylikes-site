@@ -22,10 +22,12 @@ window.GRESHY_PRODUCTS = [
     "name": "Cinnamon Mist",
     "category": "Perfumes",
     "priceCategory": "Herbal Perfume",
-    "description": "A warm and inviting fragrance with a comforting spicy character and a soft, elegant floral sweetness.",
+    "description": "Let your senses fall in love with the warm, sweet and captivating charm of Cinnamon Mist. Its inviting fragrance blends a comforting warmth with a soft, delightful sweetness, creating a scent that feels charming, refreshing and memorable.\n\nPerfect for everyday wear, Cinnamon Mist adds a beautiful finishing touch to your personal style, whether you are heading out for the day or enjoying a special moment.\n\n**Cinnamon Mist by Greshy Likes Herbal — A Little Warmth, A Lasting Impression.",
     "size": "50 ml",
     "price": 2950,
-    "images": [],
+    "images": [
+      "assets/images/product-cc3ad2ef14eaf7e6e89eb250.jpg"
+    ],
     "availability": "enquire",
     "published": true,
     "featured": false,
@@ -267,5 +269,18 @@ window.GRESHY_PRODUCTS = [
     "featured": false,
     "source": "Supplied image filename",
     "section": "more"
+  },
+  {
+    "id": "product-1792173856159",
+    "name": "New product",
+    "category": "Personal Care",
+    "section": "more",
+    "priceCategory": "",
+    "description": "",
+    "price": null,
+    "size": null,
+    "images": [],
+    "availability": "enquire",
+    "published": false
   }
 ];
