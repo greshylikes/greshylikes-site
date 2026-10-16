@@ -282,5 +282,20 @@ window.GRESHY_PRODUCTS = [
     "images": [],
     "availability": "enquire",
     "published": false
+  },
+  {
+    "id": "product-1792174596930",
+    "name": "Greshy Likes Fine Fragrance",
+    "category": "Fine Fragrance Perfume",
+    "section": "signature",
+    "priceCategory": "",
+    "description": "Experience the art of fine fragrance with Greshy Likes Herbal Fine Fragrance, especially suited for hotel amenities, Party return gifts, guest welcome gifts and premium hospitality experiences. Presented in a compact 5 ml bottle, this elegant fragrance offers a refined scent experience inspired by nature and crafted to enhance every guest’s stay.\n\nSuitable For:  Hotels, resorts, guest amenities and welcome gifts\n\n**Greshy Likes Herbal – Luxury with Ayurveda**",
+    "price": null,
+    "size": "5ml",
+    "images": [
+      "assets/images/product-0ab47dd5b66fbc045e23321a.png"
+    ],
+    "availability": "enquire",
+    "published": true
   }
 ];
