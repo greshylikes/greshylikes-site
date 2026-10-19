@@ -5,7 +5,7 @@ window.GRESHY_PRODUCTS = [
     "name": "Royal Bloom",
     "category": "Perfumes",
     "priceCategory": "Premium Herbal Perfume",
-    "description": "A signature fragrance combining premium presentation with the distinctive appeal of herbal-inspired perfumery.",
+    "description": "A signature fragrance combining premium presentation with the distinctive appeal of herbal-inspired perfumery.\n\n**Royal Bloom Herbal Perfume – Discover Your Royal Signature**\n\nStep into a world of elegance with Royal Bloom, an enchanting herbal perfume inspired by the warmth of clove, the richness of cardamom and the timeless beauty of botanical perfumery.\n\nCreated for those who appreciate a distinctive fragrance with a luxurious character, Royal Bloom brings sophistication and confidence to every occasion.\n\nMake your presence memorable with a fragrance that reflects your individuality.\n\n**Ready to experience Royal Bloom?**\n\nExplore the collection and order yours today from Greshy Likes Herbal.\n\nGreshy Likes Herbal  \nLuxury with Ayurveda",
     "size": "50 ml",
     "price": 6900,
     "images": [
@@ -90,10 +90,12 @@ window.GRESHY_PRODUCTS = [
     "name": "Jasmine Pearl",
     "category": "Perfumes",
     "priceCategory": "Herbal Perfume",
-    "description": "A graceful floral fragrance with a delicate, sophisticated character inspired by the beauty of jasmine.",
+    "description": "Make every moment unforgettable with a fragrance that speaks of elegance, beauty and timeless charm.\n\nFall in love with the enchanting floral sweetness of jasmine, the creamy warmth and the exotic allure of ylang-ylang. A captivating blend that surrounds you with sophistication and leaves a beautiful impression wherever you go.\n\nMore than a fragrance, it is your expression of confidence, grace and individuality.\n\nDiscover your signature scent with Greshy Likes Herbal, where the beauty of botanical ingredients meets the art of fine perfumery.\n\n**Greshy Likes Herbal**\nLuxury with Ayurveda\n\nLet your fragrance tell your story.",
     "size": "50 ml",
     "price": 2950,
-    "images": [],
+    "images": [
+      "assets/images/product-8595888ec6b8474c15a5870f.jpg"
+    ],
     "availability": "enquire",
     "published": true,
     "featured": false,
