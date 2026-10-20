@@ -21,8 +21,13 @@ def h(x): return html.escape(str(x if x is not None else ''),quote=True)
 def url(path): return DOMAIN+'/'+path.lstrip('/')
 def product_path(p): return 'products/'+urllib.parse.quote(str(p['id']),safe='-')+'.html'
 def cents(p):
-    price=p.get('price')
-    return 'LKR '+format(float(price),',.0f') if price not in (None,'') else 'Price on enquiry'
+    prices=[]
+    if p.get('price') not in (None,''):
+        prices.append('LKR '+format(float(p['price']),',.2f').rstrip('0').rstrip('.'))
+    if p.get('priceUsd') not in (None,''):
+        prices.append('USD '+format(float(p['priceUsd']),',.2f'))
+    return ' / '.join(prices) or 'Price on enquiry'
+
 def ld(data):
     return json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
 
@@ -97,7 +102,13 @@ def product_page(p,site,other):
         if p.get('availability') in av: offer['availability']=av[p['availability']]
     obj={'@context':'https://schema.org','@type':'Product','name':p['name'],'description':desc,'brand':{'@type':'Brand','name':site.get('brand') or BRAND},'category':category,'url':canonical}
     if image:obj['image']=url(image)
-    if offer:obj['offers']=offer
+    offers=[offer] if offer else []
+    if p.get('priceUsd') not in (None,''):
+        usd={'@type':'Offer','url':canonical,'price':p['priceUsd'],'priceCurrency':'USD','seller':{'@type':'Organization','name':site.get('brand') or BRAND}}
+        av={'in_stock':'https://schema.org/InStock','out_of_stock':'https://schema.org/OutOfStock'}
+        if p.get('availability') in av: usd['availability']=av[p['availability']]
+        offers.append(usd)
+    if offers:obj['offers']=offers
     breadcrumbs=breadcrumb_json(path,p['name'],('perfumes/','Perfumes') if category=='Perfumes' else ('personal-care/','Personal Care') if category=='Personal Care' else ('car-fragrance/','Car Fragrance'))
     schema={'@context':'https://schema.org','@graph':[obj,breadcrumbs]}
     status={'in_stock':'Available to order','out_of_stock':'Currently unavailable','coming_soon':'Coming soon','enquire':'Please enquire to confirm availability'}.get(p.get('availability'),'Please enquire')
@@ -118,7 +129,7 @@ def product_page(p,site,other):
 
 def category_page(slug,title,desc,entries,site):
     path=slug+'/'; canonical=url(path)
-    links=''.join(f'<article class="category-card"><a class="category-img" href="../{h(product_path(p))}">{pimage(p)}</a><h2><a href="../{h(product_path(p))}">{h(p["name"])}</a></h2><p>{h((p.get("description") or "")[:140])}</p><strong>{h(cents(p))}</strong><a href="../{h(product_path(p))}">View product ↗</a></article>' for p in entries)
+    links=''.join(f'<article class="category-card"><a class="category-img" href="../{h(product_path(p))}">{pimage(p)}</a><h2><a href="../{h(product_path(p))}">{h(p["name"])}</a></h2><p>{h((p.get("shortDescription") or ""))}</p><strong>{h(cents(p))}</strong><a href="../{h(product_path(p))}">View product ↗</a></article>' for p in entries)
     schema=breadcrumb_json(path,title)
     body=f'<section class="sub-shell sub-category"><p class="sub-eyebrow">GRESHY LIKES HERBAL · SRI LANKA</p><h1>{h(title)}</h1><p class="category-lead">{h(desc)}</p><div class="category-grid">{links}</div></section>'
     return layout(title+' | '+(site.get('brand') or BRAND)+' Sri Lanka',desc,canonical,h(title),body,site,None,schema)
@@ -248,6 +259,8 @@ def rebuild():
             raise ValueError(f'Duplicate product id {slug!r}; each product needs a unique ID')
         if not isinstance(p.get('name'),str) or not p['name'].strip():
             raise ValueError(f'Missing product name for {slug!r}')
+        if p.get('priceUsd') not in (None,'') and (not isinstance(p['priceUsd'], (float,int)) or isinstance(p['priceUsd'],bool) or p['priceUsd']<0):
+            raise ValueError(f'Invalid USD price for {slug!r}')
         if p.get('price') not in (None,'') and (not isinstance(p['price'], (float,int)) or isinstance(p['price'],bool) or p['price']<0):
             raise ValueError(f'Invalid price for {slug!r}')
         seen.add(slug)

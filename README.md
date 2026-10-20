@@ -118,3 +118,7 @@ Your public static hosting cannot detect changes made only on your PC. For autom
 ## Save and publish from the editor
 
 While `START_AUTO_UPDATE.bat` is running, Save writes the corresponding file in `data/` and rebuilds the homepage, product and category pages, sitemap, and `dist/` before confirming success. New products appear when their **Display this product on the website** checkbox is checked and you save. Removing a product also saves and rebuilds. Publish saves both product and website forms and prepares the local `dist/` output; public deployment still requires uploading `dist/` or pushing to your configured Git host. Refresh open website tabs after saving.
+
+Product descriptions: edit **Short description** for homepage cards, collection cards and the product popup. The existing **Long description** is used on the full product page.
+
+Prices: edit **Price in LKR** and **Price in USD** independently in Products & Prices. Both entered prices appear together. A blank currency price is omitted; when both are blank, customers see “Price on enquiry”. USD values are not automatically converted.

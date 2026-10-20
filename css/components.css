@@ -53,3 +53,10 @@
 .seo-category-links a {font-size:.75rem;color:#234c35;border-bottom:1px solid #b9a17c;padding:5px 0;}
 .seo-category-links a:hover{color:#947549;}
 @media(max-width:560px){.seo-category-links{padding:0 18px 46px;gap:12px 18px;} .product-page-link{font-size:.62rem;}}
+
+/* Hidden placeholders must never overlay product details. */
+[hidden]{display:none!important}
+.modal-image{position:relative;overflow:hidden}
+.modal-close{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:#f9f7ef;box-shadow:0 2px 12px #0002;cursor:pointer}
+.modal-info{min-width:0;overflow-wrap:anywhere}
+.product-price{white-space:pre-line;overflow-wrap:anywhere}

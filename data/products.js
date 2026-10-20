@@ -15,7 +15,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": true,
     "source": "Excel catalogue",
-    "section": "signature"
+    "section": "signature",
+    "shortDescription": "A distinctive herbal-inspired fragrance with warm clove and cardamom character.",
+    "priceUsd": null
   },
   {
     "id": "cinnamon-mist",
@@ -32,7 +34,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Excel catalogue",
-    "section": "signature"
+    "section": "signature",
+    "shortDescription": "Warm, sweet and inviting—a charming fragrance for everyday moments.",
+    "priceUsd": null
   },
   {
     "id": "cinnamon-gold",
@@ -49,7 +53,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Excel catalogue",
-    "section": "signature"
+    "section": "signature",
+    "shortDescription": "Cinnamon, rose, vanilla and lemon meet in a warm, sophisticated fragrance.",
+    "priceUsd": null
   },
   {
     "id": "emerald-fresh",
@@ -66,7 +72,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": true,
     "source": "Excel catalogue",
-    "section": "signature"
+    "section": "signature",
+    "shortDescription": "Fresh green character meets earthy patchouli and woody elegance.",
+    "priceUsd": null
   },
   {
     "id": "emerald-crown",
@@ -83,7 +91,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Excel catalogue",
-    "section": "signature"
+    "section": "signature",
+    "shortDescription": "A bold, elegant herbal-inspired fragrance with a refined botanical character.",
+    "priceUsd": null
   },
   {
     "id": "jasmine-pearl",
@@ -100,7 +110,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Excel catalogue",
-    "section": "signature"
+    "section": "signature",
+    "shortDescription": "Jasmine sweetness and exotic ylang-ylang create an elegant floral fragrance.",
+    "priceUsd": null
   },
   {
     "id": "golden-crown",
@@ -117,7 +129,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": true,
     "source": "Excel catalogue",
-    "section": "signature"
+    "section": "signature",
+    "shortDescription": "A distinctive fragrance with a rich character and a touch of golden elegance.",
+    "priceUsd": null
   },
   {
     "id": "lavender-breeze",
@@ -134,7 +148,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Excel catalogue",
-    "section": "signature"
+    "section": "signature",
+    "shortDescription": "A soft, lavender-inspired fragrance with a fresh, elegant character.",
+    "priceUsd": null
   },
   {
     "id": "lavender-gold",
@@ -151,7 +167,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": true,
     "source": "Excel catalogue",
-    "section": "signature"
+    "section": "signature",
+    "shortDescription": "Discover the floral elegance of lavender in a premium fragrance.",
+    "priceUsd": null
   },
   {
     "id": "clove-breeze",
@@ -168,7 +186,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Excel catalogue",
-    "section": "signature"
+    "section": "signature",
+    "shortDescription": "Warm clove-inspired spice with a delicate touch of floral freshness.",
+    "priceUsd": null
   },
   {
     "id": "herbal-perfume-10-ml",
@@ -185,7 +205,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Supplied image filename",
-    "section": "signature"
+    "section": "signature",
+    "shortDescription": "Your favourite fragrance in a compact size, ready to take wherever the day leads.",
+    "priceUsd": null
   },
   {
     "id": "herbal-brightening-face-cream",
@@ -202,7 +224,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Supplied image filename",
-    "section": "more"
+    "section": "more",
+    "shortDescription": "Explore our herbal-inspired face cream, a simple addition to your personal care routine.",
+    "priceUsd": null
   },
   {
     "id": "natural-lip-balm",
@@ -219,7 +243,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Supplied image filename",
-    "section": "more"
+    "section": "more",
+    "shortDescription": "Keep lip care close at hand with our compact herbal-inspired lip balm.",
+    "priceUsd": null
   },
   {
     "id": "herbal-body-wash",
@@ -236,7 +262,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Supplied image filename",
-    "section": "more"
+    "section": "more",
+    "shortDescription": "Refresh your daily shower routine with our botanical-inspired body wash.",
+    "priceUsd": null
   },
   {
     "id": "herbal-face-wash",
@@ -253,7 +281,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Supplied image filename",
-    "section": "more"
+    "section": "more",
+    "shortDescription": "Bring a botanical touch to your daily cleansing routine with our herbal face wash.",
+    "priceUsd": null
   },
   {
     "id": "car-diffuser",
@@ -270,7 +300,9 @@ window.GRESHY_PRODUCTS = [
     "published": true,
     "featured": false,
     "source": "Supplied image filename",
-    "section": "more"
+    "section": "more",
+    "shortDescription": "Bring a touch of your favourite fragrance to every drive.",
+    "priceUsd": null
   },
   {
     "id": "product-1792173856159",
@@ -283,7 +315,9 @@ window.GRESHY_PRODUCTS = [
     "size": null,
     "images": [],
     "availability": "enquire",
-    "published": false
+    "published": false,
+    "shortDescription": "Discover New product from Greshy Likes Herbal.",
+    "priceUsd": null
   },
   {
     "id": "product-1792174596930",
@@ -298,7 +332,9 @@ window.GRESHY_PRODUCTS = [
       "assets/images/product-0ab47dd5b66fbc045e23321a.png"
     ],
     "availability": "enquire",
-    "published": true
+    "published": true,
+    "shortDescription": "Discover Greshy Likes Fine Fragrance from Greshy Likes Herbal.",
+    "priceUsd": null
   },
   {
     "id": "product-1792397998612",
@@ -311,7 +347,9 @@ window.GRESHY_PRODUCTS = [
     "size": null,
     "images": [],
     "availability": "enquire",
-    "published": false
+    "published": false,
+    "shortDescription": "Discover New product from Greshy Likes Herbal.",
+    "priceUsd": null
   },
   {
     "id": "product-1792398001872",
@@ -326,6 +364,8 @@ window.GRESHY_PRODUCTS = [
       "assets/images/product-6c4630f20a452b35248c0fad.jpg"
     ],
     "availability": "enquire",
-    "published": true
+    "published": true,
+    "shortDescription": "Your favourite fragrance in a compact size, ready to take wherever the day leads.",
+    "priceUsd": null
   }
 ];

@@ -16,8 +16,12 @@
     const node = document.getElementById(id);
     if (node) node.textContent = value;
   };
-  const money = p => (p === '' || p == null) ? 'Price on enquiry' :
-    'LKR ' + Number(p).toLocaleString('en-LK');
+  const money = p => {
+    const prices = [];
+    if (p.price !== '' && p.price != null) prices.push('LKR ' + Number(p.price).toLocaleString('en-LK', {maximumFractionDigits: 2}));
+    if (p.priceUsd !== '' && p.priceUsd != null) prices.push('USD ' + Number(p.priceUsd).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+    return prices.join(' / ') || 'Price on enquiry';
+  };
   const description = product.description || 'Contact us to learn more about this product.';
   const status = {
     in_stock: 'Available to order',
@@ -27,7 +31,7 @@
   };
   set('pageName', product.name);
   set('pageCategory', (product.category || 'Product') + ' · GRESHY LIKES HERBAL');
-  set('pagePrice', money(product.price));
+  set('pagePrice', money(product));
   set('pageDescription', description);
   set('pageSize', product.size || 'Contact us for details');
   set('pageAvailability', status[product.availability] || 'Please enquire');
